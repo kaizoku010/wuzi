@@ -1,0 +1,17 @@
+.eAjWCS {
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 8px;
+  padding: 8px;
+  color: black;
+  margin: 48px auto;
+  max-width: 90%;
+  width: 550px;
+  padding: 0;
+  box-shadow: 0px 5px 35px 0px rgba(50, 50, 93, 0.17);
+}
+
+.jexrkC:hover {
+  background-color: red;
+  color: white;
+}

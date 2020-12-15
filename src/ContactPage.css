@@ -1,0 +1,115 @@
+.contact__holder {
+  display: flex;
+  background-color: white;
+  border-radius: 20px;
+  margin: 40px;
+  justify-content: center;
+}
+
+.contact__left {
+  flex-direction: column;
+  flex-grow: 3;
+}
+
+.contact__info {
+  /* background-image: url("./images/eyes.jpg"); */
+  display: flex;
+  padding: 128px;
+  place-content: center;
+  background-color: black;
+}
+
+.contact__heading {
+  padding: 27px;
+}
+.contact__holder h3 {
+  color: #d52027;
+  margin-top: 10px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.contactInfo__holder p {
+  color: whitesmoke;
+}
+
+.contact__right {
+  background-image: url("./images//map.png");
+  background-size: 100%;
+  margin: 10px 10px 10px 0px;
+  width: 32%;
+}
+
+.contact__img {
+  height: 674px;
+  background: -moz-radial-gradient(circle, transparent, white 50%, white 70%);
+}
+
+.contactinfo__holder {
+  margin-right: 20px;
+  margin-left: 10px;
+  flex-direction: row;
+}
+
+.contactinfo__left {
+  flex-direction: column;
+}
+
+.contactinfo__ {
+  flex-direction: column;
+}
+
+.contact__holder span {
+  color: gray;
+  font-size: 4rem;
+}
+
+.contact__question {
+  font-size: 7rem;
+  font-family: sans-serif;
+  margin-top: -24px;
+}
+
+.top__div {
+  background-color: #dbdbdb;
+  padding: 2px;
+}
+.space {
+  margin: 30px;
+}
+
+@media screen and (max-width: 900px) {
+  .contact__right {
+    background-image: url("./images/map.png");
+    background-size: 100%;
+    margin: 10px 10px 10px 0px;
+    height: 370px;
+    background-position: center;
+    width: 100%;
+  }
+
+  .contact__holder {
+    display: flex;
+    background-color: white;
+    border-radius: 20px;
+    margin: 40px;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .contact__info {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact__question {
+    font-size: 4rem;
+    font-family: sans-serif;
+    margin-top: -24px;
+  }
+}
+
+.contact__body {
+  background-color: #dbdbdb;
+}

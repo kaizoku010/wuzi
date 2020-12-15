@@ -1,0 +1,15 @@
+.carousel__price{
+    border-radius: 15px 0px 0px 15px;
+    background-color: gray;
+    color: black;
+    font-size: 15px;
+
+}
+
+.carousel__image__{
+    background-size:  cover;    
+    flex-grow: 2;
+    object-fit: unset;
+    height: 530px;
+    background-position: center;
+}

@@ -1,0 +1,121 @@
+.newProduct__holder {
+  margin-top: 23px;
+  /* margin-right: 60px; */
+  /* padding-top: 51px; */
+  padding-right: 21px;
+  padding-bottom: 51px;
+  padding-left: 21px;
+  margin-bottom: 43px;
+  /* margin-left: 60px; */
+  border-radius: 5px;
+  flex-direction: column;
+  color: #666;
+  border: 2px solid rgb(238, 236, 236);
+  display: flex;
+}
+
+@media screen and (max-width: 900px) {
+  .newProduct__holder {
+    margin-top: 23px;
+    /* margin-right: 60px; */
+    /* padding-top: 51px; */
+    padding-right: 21px;
+    padding-bottom: 51px;
+    padding-left: 21px;
+    margin-bottom: 43px;
+    /* margin-left: 60px; */
+    border-radius: 5px;
+    flex-direction: column;
+    color: #666;
+    margin-top: 30px;
+    border: 2px solid rgb(238, 236, 236);
+    display: flex;
+  }
+}
+
+.newProduct__addToCart:hover {
+  background-color: cornflowerblue;
+  color: white;
+  border: 2px solid #ffffff;
+}
+
+.home__row_ {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.newProduct__holder:hover {
+  height: auto;
+}
+.cart_ic {
+  float: right;
+  margin-bottom: -40px;
+}
+
+.newProduct__image {
+  flex-grow: 3;
+  object-fit: contain;
+  /* width: 300px; */
+  height: 264px;
+}
+
+.newProduct__infoAllHolder {
+  flex-grow: 2;
+  align-self: center;
+  flex-direction: column;
+}
+
+.newProduct__productHeading {
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: black;
+  font-size: larger;
+}
+
+.newProduct__productInfoHolder {
+  width: fit-content;
+  text-align: justify;
+}
+
+.newProduct__info {
+  text-align: justify;
+  width: 72%;
+}
+
+.newProduct__rating {
+  color: #ffbc00;
+  margin-bottom: 0px;
+  margin-top: 7px;
+}
+
+.newProduct__buttonHolder {
+  display: flex;
+  flex-direction: column;
+
+  place-content: space-between;
+}
+
+.newProduct__addToCart {
+  align-self: start;
+  align-self: stretch;
+  /* background-color: #d52027; */
+  border: none;
+  color: #0b0101;
+  padding: 8px 12px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border: 2px solid #d52027;
+  margin: 4px 2px;
+  border-radius: 1px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.newProduct__price {
+  /* align-self: flex-end; */
+  font-size: 15px;
+  color: black;
+  align-self: left;
+  font-weight: 400;
+}

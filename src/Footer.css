@@ -1,0 +1,93 @@
+footer {
+  text-align: center;
+  padding: 20px;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1a1a1a17;
+  /* color: white; */
+}
+
+.footer__holder {
+  margin: 21px;
+  text-align: justify;
+}
+
+@media screen and (max-width: 900px) {
+  .footer__holder {
+    margin: 0px;
+    text-align: justify;
+  }
+}
+
+.footer__holder a {
+  text-decoration: none;
+}
+
+.footer__holder a :hover {
+  text-decoration-line: none;
+  color: #d52027;
+}
+
+.footer > footer__holderItem a:hover {
+  color: #d52027;
+}
+
+.footer__div {
+  display: block;
+}
+
+.bottom__footer {
+  background-color: #111;
+  text-align: center;
+  color: gray;
+  padding-bottom: 10px;
+}
+
+.footer__subscription {
+  /* flex-grow: 3; */
+}
+
+.footer__about {
+  width: 289px;
+  color: #666;
+  margin-top: 7px;
+}
+
+.form {
+  color: black;
+}
+
+/* .footer__holder h1 {
+  color: ;
+} */
+
+.footer__holder form {
+  color: black;
+}
+
+.footer___ {
+  margin: 20px;
+  flex-grow: 3;
+}
+
+.footer > button:hover {
+  background-color: #d52027;
+}
+
+a:hover {
+  color: #d52027;
+}
+
+.footer__holderItem {
+  margin-top: 18px;
+  color: gray;
+}
+
+.footer__divider {
+  color: whites;
+  border-radius: 5px;
+  align-self: center;
+  width: 100%;
+}
