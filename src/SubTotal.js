@@ -5,6 +5,7 @@ import { useStateValue } from './StateProvider';
 import { getCartTotal } from './reducer';
 import { Link, useHistory } from 'react-router-dom';
 
+
 function SubTotal() {
     const history = useHistory();
     const [{cart}] = useStateValue();
@@ -26,14 +27,14 @@ function SubTotal() {
                 )}
                  
                 decimalScale={1}
+                thousandSeparator={true}
                 value={getCartTotal(cart)}
                 displayType={"text"}
-                thousandSeparator={true}
                 prefix={"UGX "}
             />
 
          
-            <button onClick={e=>history.push('/paymentPage')} className="subtotal__button">Proceed to Checkout</button>
+            <button onClick={e=>history.push('/payment')} className="subtotal__button">Proceed to Checkout</button>
 
         </div>
     )

@@ -285,6 +285,30 @@
   cursor: pointer;
 }
 
+.hero__btn2 {
+  outline: 0;
+  margin-top: 5px;
+  margin-left: 5px;
+  display: inline-block;
+  /* border-radius: 20px; */
+  font-size: 13px;
+  border: none;
+  border-color: white;
+  /* padding: 13px 36px; */
+  /* margin-left: 460px; */
+  color: white;
+  background-color: rgba(221, 221, 221, 0);
+  text-align: center;
+  cursor: pointer;
+}
+
+.hero__btn2:hover {
+  /* background-color: #d52027;
+  border-radius: 5px soild #d52027; */
+  color: gray;
+  border: none;
+}
+
 .hero__btn:hover {
   background-color: #d52027;
   border-radius: 5px soild #d52027;
@@ -516,4 +540,7 @@
 
 .arrivals__holder p {
   font-weight: initial;
+}
+
+.arrow {
 }

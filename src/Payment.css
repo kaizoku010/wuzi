@@ -27,12 +27,12 @@
   /* this section takes up 20% of the div's width */
 }
 
-.payment__address {
-  flex: 0 8;
+.payment__address, .payment__items, .payment__details {
+  flex: 0.8;
   /* this one takes up 80^% of the div's width  */
 }
 
-.payment__items {
-  flex: 0 8;
-  /* this one also takes up 80% of the div's width */
-}
+
+/* .payment__priceContainer{
+  
+} */

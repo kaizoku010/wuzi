@@ -9,6 +9,7 @@ import work from "./images/working.png";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCartOutlined";
+import Arrow from "@material-ui/icons/ArrowForward";  
 
 import logo from "./images/logo.png";
 import { useStateValue } from './StateProvider';
@@ -117,8 +118,9 @@ function WuziHome() {
     
         <h1 className="hero__title">ALL ZUULA DRESSES</h1> 
     <p className="hero__description__">Setting the top, right, bottom, and left unregister to register below.</p>
-          <Link to="/shop">
-          <button className="hero__btn">SHOP NOW</button>
+        <Link to="/shop">
+          {/* //<Arrow className="arrow"/> */}
+          <button className="hero__btn">SHOP NOW</button> <button  className="hero__btn2">contact us</button>  
           </Link>
         </div>
 

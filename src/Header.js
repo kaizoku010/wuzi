@@ -1,11 +1,11 @@
-import React from "react";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
+import React from "react";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import { auth } from "./firebase";
 import "./Header.css";
 import logo from "./images/logo.png";
 import { useStateValue } from "./StateProvider";
-import { auth } from "./firebase";
 
 
 function Header() {
@@ -15,16 +15,23 @@ function Header() {
   const handleAuth = () => {
     if (user) {
       auth.signOut();
+      
     }
   }
 
+  // useEffect(() => {
+  //   cart.length 
+  //   return () => {
+  //     cleanup
+  //   }
+  // }, [cart])
+
+
+ 
   if (cart.length + 1) {
     console.log('hellllloooo');
     
   }
-
-
-
   return (
     <nav className="header">
       {/* get the logo from shyaka */}

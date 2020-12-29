@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import "./Login.css"
-import logo from "./images/logo.png";
+import logo from "./images/logo_black.png";
 import { Link, useHistory } from 'react-router-dom';
 import { auth } from "./firebase";
 
@@ -14,6 +14,7 @@ function Login() {
       //login 
     const signIn = event => {
         event.preventDefault()
+        // auth.signInWithPopup().
         auth.signInWithEmailAndPassword(email, password).
             then(auth => {
             history.push('/')
@@ -24,7 +25,6 @@ function Login() {
     //create user 
     const register = event => {
         event.preventDefault()
-
         auth.createUserWithEmailAndPassword(email, password)
             .then(auth => {
             history.push('/')

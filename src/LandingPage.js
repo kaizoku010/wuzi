@@ -73,7 +73,7 @@ function LandingPage() {
       <Product
           id="1218"
           key={7}
-        price={11.95}
+        price={110000}
         rating={5}
         image={yk}
        title="Beautifully made kitenge dress with nice fabric by Zzula Designs.">   
@@ -81,14 +81,14 @@ function LandingPage() {
         <Product
              key={8}
         id="1219"
-        price={11.95}
+        price={265000}
         rating={5}
         image={yao}
        title="The Nike Standard Issue Pullover Hoodie is made to play in and wear all day.">   
         </Product>
         <Product
         id="1210"
-        price={11.95}
+        price={400000}
           rating={5}
           key={9}
         image={k2}
@@ -97,7 +97,7 @@ function LandingPage() {
         <Product
           id="12111"
           key={10}
-        price={11.95}
+        price={6000000}
         rating={5}
         image={k1}
        title="Beautifully made kitenge dress with nice fabric by Zzula Designs.">   
@@ -110,7 +110,7 @@ function LandingPage() {
       <Product
           id="1218"
           key={7}
-        price={11.95}
+        price={400000}
         rating={5}
         image={nike}
        title="Beautifully made kitenge dress with nice fabric by Zzula Designs.">   
@@ -118,14 +118,14 @@ function LandingPage() {
         <Product
              key={8}
         id="1219"
-        price={11.95}
+        price={400000}
         rating={5}
         image={max}
        title="The Nike Standard Issue Pullover Hoodie is made to play in and wear all day.">   
         </Product>
         <Product
         id="1210"
-        price={11.95}
+        price={400000}
           rating={5}
           key={9}
         image={jacket}
@@ -134,7 +134,7 @@ function LandingPage() {
         <Product
           id="12111"
           key={10}
-        price={11.95}
+        price={400000}
         rating={5}
         image={strike}
        title="Beautifully made kitenge dress with nice fabric by Zzula Designs.">   

@@ -2,7 +2,7 @@ import React from 'react'
 import './NewProduct.css'
 import fleece from "./images/fleece.jpg";
 import { useStateValue } from "./StateProvider"
-
+import CurrencyFormat from "react-currency-format";
 import Cart from "@material-ui/icons/ShoppingCartSharp"
 import Ratings from "@material-ui/icons/Star"
 import { Link } from '@material-ui/core';
@@ -57,8 +57,26 @@ function NewProduct({ id, title, image, price, rating }) {
                     }    
 
                 <div className="newProduct__buttonHolder">
-                <h1 className="newProduct__price">UGX {price}</h1>
 
+                    <h1 className="newProduct__price">
+                        
+            <CurrencyFormat
+                renderText={(value) => (
+                    <>
+                        <p> 
+                <strong>{value}</strong>
+                        </p>
+                    </>
+ 
+                )}
+                 
+                decimalScale={1}
+                thousandSeparator={true}
+                value={price}
+                displayType={"text"}
+                prefix={"UGX "}
+            />
+</h1>
                     <button className="newProduct__addToCart"  onClick={addToCart}><Cart className="cart_ic"/>ADD TO CART</button>
                 </div>
 

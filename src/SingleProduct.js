@@ -1,6 +1,7 @@
 import React from 'react'
 import './SingleProduct.css'
 import { useStateValue } from "./StateProvider"
+import CurrencyFormat from "react-currency-format"
 import Ratings from "@material-ui/icons/Star"
 
 
@@ -55,8 +56,26 @@ function SingleProduct({ id, title, image, price, rating }) {
                 <div className="newProduct__buttonHolder__">
 
                     <button className="newProduct__addToCart__" onClick={addToCart}>ADD TO CART</button>
-                    <h1 className="newProduct__price__">UGX {price}</h1>
-
+                  
+                    <h1 className="newProduct__price__">
+                        
+            <CurrencyFormat
+                renderText={(value) => (
+                    <>
+                        <p> 
+                <strong>{value}</strong>
+                        </p>
+                    </>
+ 
+                )}
+                 
+                decimalScale={1}
+                thousandSeparator={true}
+                value={price}
+                displayType={"text"}
+                prefix={"UGX "}
+            />
+</h1>
                 </div>
 
             </div>

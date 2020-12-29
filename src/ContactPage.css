@@ -19,6 +19,14 @@
   background-color: black;
 }
 
+.contact__page {
+  background-image: url("./images/bg__.jpg");
+  background-size: 118%;
+  background-repeat: no-repeat;
+  padding-top: 8px;
+  background-position: center;
+}
+
 .contact__heading {
   padding: 27px;
 }
@@ -34,15 +42,21 @@
 }
 
 .contact__right {
-  background-image: url("./images//map.png");
-  background-size: 100%;
-  margin: 10px 10px 10px 0px;
+  background-image: url("images/m2ap.png");
+background-position: center;
+  /* margin: 10px 10px 10px 0px; */
+  background-repeat: no-repeat;
   width: 32%;
 }
 
 .contact__img {
   height: 674px;
-  background: -moz-radial-gradient(circle, transparent, white 50%, white 70%);
+  background: -webkit-radial-gradient(
+    circle,
+    transparent,
+    white 50%,
+    white 70%
+  );
 }
 
 .contactinfo__holder {
@@ -57,11 +71,17 @@
 
 .contactinfo__ {
   flex-direction: column;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .contact__holder span {
   color: gray;
   font-size: 4rem;
+}
+
+.extras {
+  margin-top: 30px;
 }
 
 .contact__question {
@@ -71,7 +91,7 @@
 }
 
 .top__div {
-  background-color: #dbdbdb;
+  background-color: #dbdbdb00;
   padding: 2px;
 }
 .space {
@@ -92,7 +112,7 @@
     display: flex;
     background-color: white;
     border-radius: 20px;
-    margin: 40px;
+    margin: 40px 40px 0px 40px;
     flex-direction: column;
     justify-content: center;
   }
@@ -111,5 +131,12 @@
 }
 
 .contact__body {
-  background-color: #dbdbdb;
+  /* background-color: #dbdbdb23; */
+  margin-bottom: -38px;
+  padding-bottom: 45px;
+}
+
+.contact__ic {
+  color: rgb(255, 255, 255);
+  margin-bottom: -10px;
 }

@@ -79,10 +79,10 @@
   font-size: 3.2rem;
   font-weight: 300;
   display: flex;
-  height: 200px;
-  background-position: center;
+  height: 138px;
+  background-position: bottom;
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),
-    url("./images/matte.jpg");
+    url(/static/media/matte.ea8fdb55.jpg);
 }
 
 .top__product__title {

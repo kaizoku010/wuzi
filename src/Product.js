@@ -1,6 +1,7 @@
 import React from 'react'
 import './Product.css'
 import fleece from "./images/fleece.jpg";
+import CurrencyFormat from "react-currency-format"
 import { useStateValue } from "./StateProvider"
 import Ratings from "@material-ui/icons/Star"
 import NewProduct from "./NewProduct"
@@ -59,7 +60,29 @@ function Product({ id, title, image, price, rating }) {
                 <div className="newProduct__buttonHolder_">
                 <button className="newProduct__addToCart_"  onClick={addToCart}>ADD TO CART</button>
 
-                    <h1 className="newProduct__price_">UGX {price}</h1>
+                    <h1 className="newProduct__price_">
+                        
+            <CurrencyFormat
+                renderText={(value) => (
+                    <>
+                        <p> 
+                            Subtotal({cart?.length} items):
+                <strong>{value}</strong>
+                        </p>
+                        <small className="subtotal__gift"> 
+                            <input type="checkbox"/>This order contains a gift
+                        </small>
+                    </>
+ 
+                )}
+                 
+                decimalScale={1}
+                thousandSeparator={true}
+                value={price}
+                displayType={"text"}
+                prefix={"UGX "}
+            />
+</h1>
 
                 </div>
 

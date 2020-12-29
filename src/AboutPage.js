@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import "./AboutPage.css";
 import BreadCrumb from './BreadCrumb';
 import banner from './images/koffee.jpg'
-import banner2 from './images/andrea.jpg'
+import banner2 from './images/twf.jpg'
 import bolt from './images/bolt.png'
 
 function AboutPage() {
@@ -105,7 +105,7 @@ function AboutPage() {
                         <button className="btn__visit">VISIT TWF</button>
                         </Link>
 
-                        <Link to="#0753971151">
+                        <Link to="./contact">
                             <button className="btn__callUs">CONTACT  US</button>
                             </Link>
                     </div>

@@ -9,11 +9,15 @@ import Header from "./Header";
 import Shop from "./LandingPage";
 import Login from "./Login";
 import  Payment  from "./Payment";
-
+import { Elements } from "@stripe/react-stripe-js";
+import { loadStripe } from "@stripe/stripe-js";
 import  ContactPage  from "./ContactPage";
 import ProductScreen from "./ProductScreen";
 import { useStateValue } from "./StateProvider";
 import Wuzi_home from "./WuziHome";
+
+
+const promise = loadStripe("pk_test_51HzK9kI42NMmSRyA4unYMwfpK2Lp8vjxFGP23sHYh1iCj7JJnihgKEdmnl6c4XtYxhk5BSXqD3orEgxW9dFowACh00kBg18n0r");
 
 function App() {
   const [{ }, dispatch] = useStateValue();
@@ -67,9 +71,11 @@ function App() {
             <Shop />                     
           </Route>
           
-          <Route path="/paymentPage">
-          <Header />
-            <Payment />                     
+          <Route path="/payment">
+            <Header />
+            <Elements stripe={promise} >
+            <Payment />
+            </Elements>                       
           </Route>
 
           

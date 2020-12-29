@@ -1,6 +1,8 @@
 .login__logo {
   margin-right: auto;
   margin-left: -18px;
+  float: right;
+  margin-right: 234px;
   width: 200px;
   object-fit: contain;
   margin-bottom: 20px;
@@ -12,22 +14,25 @@ form {
 }
 
 .login {
-  background-image: url("./images/eyes.jpg");
+  background-image: url("./images/bg2.jpg");
   display: flex;
-  background-position: right;
+  background-position: left;
   background-repeat: no-repeat;
   background-size: 100%;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   height: max-content;
   object-fit: cover;
-  background-color: cornflowerblue;
+  background-color: white;
 }
 
 .login__container {
   width: 300px;
   display: flex;
   margin-bottom: 50px;
+  margin-right: 155px;
+  align-self: flex-end;
+  height: -moz-fit-content;
   height: fit-content;
   background-color: whitesmoke;
   flex-direction: column;
@@ -39,6 +44,7 @@ form {
 .login__container > h1 {
   font-weight: 500;
   margin-bottom: 20px;
+  align-self: center;
 }
 
 .login__container > form > h5 {
@@ -69,7 +75,6 @@ login__container > p {
   border-color: white lightblue cornflowerblue;
 }
 
-
 .login__signInButton:hover {
   background: #d52027;
   border-radius: 3px;
@@ -81,7 +86,6 @@ login__container > p {
   margin-top: 10px;
   border-color: white lightblue cornflowerblue;
 }
-
 
 .login__registerButton {
   border-radius: 2px;
