@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import "./Wuzi_home.css";
-import fleece from "./images/fleece.jpg";
 import bolt from "./images/bolt.png";
 import apparel from "./images/apparel.png";
 import eqaual from "./images/equality.png";
@@ -10,17 +9,19 @@ import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCartOutlined";
 import Arrow from "@material-ui/icons/ArrowForward";  
-
 import logo from "./images/logo.png";
 import { useStateValue } from './StateProvider';
 import { useState } from 'react';
 import { useRef } from 'react';
 import Carousell from './Carousel';
+import WomenMenElement from './WomenMenElements/WomenMenElement';
 
 function WuziHome() {
   const [header_, setNavBar] = useState(false);
   const navRef = useRef()
   navRef.current = header_
+
+
   useEffect(() => {
     const changeHeaderBackground = () => {
       if (navRef.current !== true) {
@@ -41,7 +42,10 @@ function WuziHome() {
   return (
         <div>
         {/* header and image section below */}
-            <div>
+      <div>
+        
+
+
             <nav className={header_?'active':'header_'}>
       {/* get the logo from shyaka */}
       <meta
@@ -116,11 +120,12 @@ function WuziHome() {
           <h2 className="discount__off">30% OFF</h2>
         </div>
     
-        <h1 className="hero__title">ALL ZUULA DRESSES</h1> 
+        <h1 className="hero__title">ALL SEW BANTU</h1> 
     <p className="hero__description__">Setting the top, right, bottom, and left unregister to register below.</p>
         <Link to="/shop">
           {/* //<Arrow className="arrow"/> */}
-          <button className="hero__btn">SHOP NOW</button> <button  className="hero__btn2">contact us</button>  
+          <button className="hero__btn">CHECK IT OUT</button>
+          {/* <button className="hero__btn2">contact us</button>   */}
           </Link>
         </div>
 
@@ -136,12 +141,12 @@ function WuziHome() {
         <div className="right__section">
           <div className="hero__elementRightContentHolder">
             <h3 className="headerRight__Section">
-              BIG SALE
+              EPIC SALES
             </h3>
             <h2 className="text__right__section">
             Fleece Sweaters
             </h2>
-            <Link to="/Shop">
+            <Link to={"/product/" + 3}>
             <button className="btn__">Get Items</button>
             </Link>
           </div>
@@ -149,12 +154,12 @@ function WuziHome() {
           <div className="hero__elementRightContentHolder2">
             
           <h3 className="headerRight__Section">
-            X-MAS SEASON
+           NEW YEAR'S SEASON
             </h3>
             <h2 className="text__right__section">
-            START YOUR HOLIDAY SOON
+            JUMP START YOUR 2021
             </h2>
-          <Link to="/Shop">
+          <Link to={"/product/" + 6}>
             <button className="btn__">Shop Now</button>
             </Link>
           </div>
@@ -167,6 +172,8 @@ function WuziHome() {
 
         </div>
         
+      {/* sex element */}
+      <WomenMenElement/>
   
         <div className="hero__motivation">
           <div className="hm__holder">

@@ -14,6 +14,7 @@
   display: flex;
 }
 
+
 @media screen and (max-width: 900px) {
   .newProduct__holder {
     margin-top: 23px;
@@ -101,6 +102,7 @@
   /* background-color: #d52027; */
   border: none;
   color: #0b0101;
+  display: none;
   padding: 8px 12px;
   text-align: center;
   text-decoration: none;

@@ -44,7 +44,6 @@
 .newProduct__buttonHolder_ {
   display: flex;
   flex-direction: row;
-
   place-content: space-between;
 }
 

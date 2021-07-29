@@ -8,6 +8,7 @@ import yk from "./images/hoodie.jpg";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import yao from "./images/yoga.jpg";
+import { Link } from '@material-ui/core';
 
 
 export default function Carousel() {
@@ -50,8 +51,11 @@ export default function Carousel() {
                 <img className="carousel__image" src={yoga}/>
             </div>
                 <div>
-                <h1 className="carousel__price">UGX 300,000</h1>
-                <img className="carousel__image" src={yao}/>     
+                    <h1 className="carousel__price">UGX 300,000</h1>
+                    <Link to={"/product/" + 1}>
+                        <img className="carousel__image" src={yao} />     
+                        </Link>
+                    
             </div>
                 <div>
                 <h1 className="carousel__price">UGX 100,000</h1>

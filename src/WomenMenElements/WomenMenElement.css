@@ -1,0 +1,45 @@
+.productInfo__holder {
+  display: flex;
+  background-color: white;
+  flex-direction: column;
+  padding-top: 70px;
+  height: 200px;
+  margin-top: 50px;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 70px;
+  background-image: url("../images/twf1.jpg");
+  place-content: center;
+}
+.product__sales {
+  color: white;
+  text-align: center;
+  place-self: center;
+}
+
+.product__btn {
+  width: 204px;
+  padding: 14px;
+  align-self: center;
+  border: none;
+}
+
+.product__btn:hover {
+  background-color: #d52027;
+  color: white;
+}
+
+.product___title {
+  font-size: 2rem;
+  font-weight: bolder;
+  margin-bottom: 10px;
+}
+
+.product__subtitle {
+  text-align-last: center;
+  width: 500px;
+  text-align: justify;
+  margin-bottom: 10px;
+}

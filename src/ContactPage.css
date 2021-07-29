@@ -2,7 +2,7 @@
   display: flex;
   background-color: white;
   border-radius: 20px;
-  margin: 40px;
+  margin: 78px;
   justify-content: center;
 }
 
@@ -85,7 +85,7 @@ background-position: center;
 }
 
 .contact__question {
-  font-size: 7rem;
+  font-size: 5rem;
   font-family: sans-serif;
   margin-top: -24px;
 }

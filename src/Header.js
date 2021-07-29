@@ -5,6 +5,7 @@ import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import { auth } from "./firebase";
 import "./Header.css";
 import logo from "./images/logo.png";
+import hum from "./images/menu.png";
 import { useStateValue } from "./StateProvider";
 
 
@@ -38,7 +39,11 @@ function Header() {
       <meta
   name="viewport"
   content="minimum-scale=1, initial-scale=1, width=device-width"
-/>
+      />
+      
+      <Link>
+        <img className="menu_ic" src={ hum }/>
+      </Link>
       <Link to="/">
         <img className="header__logo" src={logo} alt="wuzi_logo" />
       </Link>

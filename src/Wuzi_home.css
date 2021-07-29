@@ -167,10 +167,12 @@
     /* background-color: #ececec; */
     display: flex;
     margin-top: 7px;
+    padding-bottom: 94px;
     padding-top: 0px;
     padding-right: 194px;
     flex-direction: column;
     padding-left: 194px;
+
     /* justify-content: center; */
     align-items: center;
   }
@@ -326,7 +328,7 @@
   word-wrap: break-word;
   color: white;
   font-size: 4rem;
-  margin-top: -28px;
+  margin-top: -16px;
   margin-bottom: 0px;
 }
 
@@ -335,12 +337,14 @@
   font-size: 30px;
   font-weight: 100;
   margin-top: -6px;
+  display: none;
   /* position: relative;
   float: left; */
 }
 
 .hero__description__ {
   color: whitesmoke;
+  display: none;
   margin-top: -6px;
   margin-bottom: 5px;
   font-weight: 100;
@@ -355,7 +359,8 @@
   padding-top: 0px;
   padding-right: 194px;
   padding-left: 194px;
-  /* justify-content: center; */
+  margin-bottom: 194px;
+  justify-content: center;
   align-items: center;
 }
 
@@ -370,7 +375,7 @@
   margin-top: 7px;
   margin-bottom: 15px;
   font-weight: 100;
-  font-size: 20px;
+  font-size: 19px;
 }
 
 .headerRight__Section {
@@ -387,7 +392,7 @@
 }
 
 .hero__element button {
-  border: 2px solid black;
+  border: 2px solid #d52027;
   outline: 0;
   display: inline-block;
   background: transparent;
@@ -405,7 +410,6 @@
 .hero__element button:hover {
   background-color: #d52027;
   /* box-shadow: 0px 1px 5px 1px grey; */
-
   border: none;
   color: white;
 }
@@ -434,7 +438,7 @@
   transition: all 0.4;
   background-repeat: no-repeat;
   margin-top: 30px;
-  background-image: url("/static/media/winter.eff5168d.jpg");
+  background-image: url("./images/winter.jpg");
   margin-bottom: 30px;
 }
 
@@ -444,7 +448,7 @@
   padding: 40px;
   background-color: #666;
   transition: all 1s;
-  background-size: 464px;
+  background-size: cover;
   background-position: right;
   margin-bottom: 30px;
 }
@@ -488,7 +492,7 @@
 
 .hm__img {
   width: 52%;
-  height: 100px;
+  height: 63px;
   align-self: center;
 }
 
@@ -528,7 +532,8 @@
 
 .arrivals__holder {
   text-align: center;
-  margin-top: 59px;
+  margin-top: 94px;
+  margin-bottom: 100px;
 }
 
 .arrivals__holder h2 {

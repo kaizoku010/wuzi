@@ -1,3 +1,9 @@
+.menu_ic {
+  width: 0px;
+  height: 0px;
+  visibility: hidden;
+}
+
 .header {
   position: sticky;
   top: 0;
@@ -86,4 +92,30 @@
   flex-direction: column;
   margin-left: 10px;
   margin-right: 10px;
+}
+
+@media screen and (max-width: 640px) {
+  .header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    background-color: #131921;
+    z-index: 100;
+  }
+  .menu_ic {
+    width: 20px;
+    height: 20px;
+    margin-left: 20px;
+    visibility: visible;
+  }
+
+  .header__nav {
+    visibility: hidden;
+  }
+
+  .header__search {
+    visibility: hidden;
+  }
 }

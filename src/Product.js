@@ -40,8 +40,9 @@ function Product({ id, title, image, price, rating }) {
     return (
         <div className="newProduct__holder_">
 
-                      
-            <img className="newProduct__image_" onClick={openProductPage(id, title, image, price, rating)} src={image} />
+<Link to={"/product/" + id}>    
+            <img className="newProduct__image_" />
+            </Link>      
             <div className="newProduct__infoAllHolder_">
 
                 <h1 className="newProduct__productHeading_">PRODUCT INFO</h1>

@@ -38,3 +38,21 @@
   background: rgb(187, 11, 11);
   border-color: rgb(117, 9, 9) rgb(187, 11, 11) rgb(139, 24, 24);
 }
+
+@media screen and (max-width: 640px) {
+  .subtotal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px;
+    margin-top: 10px;
+  
+    height: 100px;
+    /* padding: 20px; */
+    padding: 20px 20px 70px;
+    background-color: #f3f3f3;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+  }
+  
+}

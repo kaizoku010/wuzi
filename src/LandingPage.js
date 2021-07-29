@@ -1,25 +1,33 @@
-import React from "react";
-import banner from "./images/converse.jpg";
+import React, { useEffect, useState } from "react";
 import "./LandingPage.css";
 import Product from "./NewProduct";
-
 import Product1 from "./SingleProduct";
-import k1 from "./images/hoodie.jpg";
-import k2 from "./images/joggers.jpg";
+import data_ from "./dataPoint/AllShopProducts";
 import yoga from "./images/yoga.jpg";
-import fleece from "./images/fleece.jpg";
-import yk from "./images/winter.jpg";
-import yao from "./images/fl.jpg";
-import nike  from "./images/uptempo.jpg";
-import jacket from "./images/jacket.jpg";
-import max from "./images/jacket.jpg";
-import strike from "./images/strike.jpg";
-import  Breadcrumb  from "./BreadCrumb";
-
-
+import Breadcrumb from "./BreadCrumb";
+import { Link } from "react-router-dom";
+import  axios from "axios";
 
 
 function LandingPage() {
+
+  const [products, setProduct] = useState([]);
+  
+  useEffect(() => {
+    const getData = async () => {
+      const {data} = await axios.get("/api/products/")
+      setProduct(data);
+      console.log("axios data:", data);
+    }
+
+    getData();
+
+    return () => {
+      //
+    }
+  }, [])
+
+
   return (
     <div className="home">
       <img className="home__image"
@@ -32,11 +40,13 @@ function LandingPage() {
 
     
       <div >
-      <Breadcrumb className="breadcrumb__" pagename="All Products"/>
+        <Breadcrumb className="breadcrumb__" pagename="All Products" />
+                {/* //featured items */}
+
         <h2 className="top__product__title">Featured Items </h2>
 
       </div>
-
+        {/* //featured items */}
       {/* fist 2 products */}
       <div className="home__row">
         <Product1
@@ -53,7 +63,7 @@ function LandingPage() {
           key={2}
         price={250000}
         rating={5}
-        image={fleece}
+        image={yoga}
        title="The Nike Yoga Fleece Cover Up made with soft thermal fabric for warm comfort. A relaxed, stretchy design lets you wear it as a V-neck or off the shoulder.">
      
         </Product1>
@@ -70,78 +80,31 @@ function LandingPage() {
        {/* fist 4 products */}
 
       <div className="home__row2">
-      <Product
-          id="1218"
-          key={7}
-        price={110000}
-        rating={5}
-        image={yk}
-       title="Beautifully made kitenge dress with nice fabric by Zzula Designs.">   
+
+
+        <ul className="product__list">
+          {""}
+          {data_.products.map((product) => (
+            <li key={product._id}  className="product__list__"  >
+              <Product
+          id={product._id}
+         price={product.price}
+         rating={product.rating}
+                  image={product.image}
+                  closeUpOne={product.closeUpOne}
+                  closeUpTwo={product.closeUpTwo}
+         desc={product.description}
+         title={product.title_}>   
+          
         </Product>
-        <Product
-             key={8}
-        id="1219"
-        price={265000}
-        rating={5}
-        image={yao}
-       title="The Nike Standard Issue Pullover Hoodie is made to play in and wear all day.">   
-        </Product>
-        <Product
-        id="1210"
-        price={400000}
-          rating={5}
-          key={9}
-        image={k2}
-       title="Beautifully made kitenge dress with nice fabric by Zzula Designs.">   
-        </Product>
-        <Product
-          id="12111"
-          key={10}
-        price={6000000}
-        rating={5}
-        image={k1}
-       title="Beautifully made kitenge dress with nice fabric by Zzula Designs.">   
-        </Product>
+
+            </li>
+          ))}
+      </ul>
+
+
       </div>
-
-             {/* Second 4 products */}
-
-      <div className="home__row2">
-      <Product
-          id="1218"
-          key={7}
-        price={400000}
-        rating={5}
-        image={nike}
-       title="Beautifully made kitenge dress with nice fabric by Zzula Designs.">   
-        </Product>
-        <Product
-             key={8}
-        id="1219"
-        price={400000}
-        rating={5}
-        image={max}
-       title="The Nike Standard Issue Pullover Hoodie is made to play in and wear all day.">   
-        </Product>
-        <Product
-        id="1210"
-        price={400000}
-          rating={5}
-          key={9}
-        image={jacket}
-       title="Beautifully made kitenge dress with nice fabric by Zzula Designs.">   
-        </Product>
-        <Product
-          id="12111"
-          key={10}
-        price={400000}
-        rating={5}
-        image={strike}
-       title="Beautifully made kitenge dress with nice fabric by Zzula Designs.">   
-        </Product>
-      </div>
-
-    </div>
+  </div>
     
   );
 }

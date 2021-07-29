@@ -3,6 +3,7 @@ import './SingleProduct.css'
 import { useStateValue } from "./StateProvider"
 import CurrencyFormat from "react-currency-format"
 import Ratings from "@material-ui/icons/Star"
+import { Link } from '@material-ui/core'
 
 
 
@@ -32,12 +33,11 @@ function SingleProduct({ id, title, image, price, rating }) {
         alert("Item availabe", title)
     }
 
-
     return (
         <div className="newProduct__holder__">
-
-            <img onClick={openProductPage} className="newProduct__image__" src={image} />
-
+        <Link to={"/product/" + id}>
+            <img  className="newProduct__image__" src={image} />
+            </Link>
             <div className="newProduct__infoAllHolder__">
 
                 <h1 className="newProduct__productHeading__">PRODUCT INFO</h1>

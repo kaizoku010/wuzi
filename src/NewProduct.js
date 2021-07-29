@@ -3,53 +3,53 @@ import './NewProduct.css'
 import fleece from "./images/fleece.jpg";
 import { useStateValue } from "./StateProvider"
 import CurrencyFormat from "react-currency-format";
-import Cart from "@material-ui/icons/ShoppingCartSharp"
+import Cart from "@material-ui/icons/ShoppingCartOutlined"
 import Ratings from "@material-ui/icons/Star"
-import { Link } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 
 
 
-function NewProduct({ id, title, image, price, rating }) {
+function NewProduct(props) {
     const [{ cart }, dispatch] = useStateValue();
 
     const addToCart = () => {
         dispatch({
             type: 'ADD_TO_CART',
             item: {
-                id: id,
-                title: title,
-                image: image,
-                price: price,
-                rating: rating,
+                id: props.id,
+                title: props.title,
+                image: props.image,
+                price: props.price,
+                rating: props.rating,
             },
         });
-        alert("Added "+title+" to Shopping Cart")
+        alert("Added "+props.title+" to Shopping Cart")
         
     };
 
 
-    const openProductPage = (id, title, image, price, rating) => {
-     //   window.open("/product/" + id)
-       // console.log("product data:",id, title, image, price, rating)
-        alert("Item here", id);
-    }
+    // const openProductPage = (id, title, image, price, rating) => {
+    //     //window.open("/product/" + id)
+    //    // console.log("product data:",id, title, image, price, rating)
+    //     alert("Item here", id);
+    // }
 
 
     return (
-        <div className="newProduct__holder">
-   
-            <img className="newProduct__image" src={image} onClick={openProductPage} />
-        
 
+        <div className="newProduct__holder">
+            <Link to={"/product/" + props.id} key={props.id} >
+            <img className="newProduct__image" src={props.image} alt={props.title} />
+            </Link>
             <div className="newProduct__infoAllHolder">
 
-                <h1 className="newProduct__productHeading">PRODUCT INFO</h1>
+                <h1 className="newProduct__productHeading">{props.title}</h1>
 
                 <div className="newProduct__productInfoHolder">
-                    <p className="newProduct__info">{title}</p>
+                    <p className="newProduct__info">{props.desc}</p>
                 </div>
                {         
-                    Array(rating) 
+                    Array(props.rating) 
                     .fill()
                             .map((_, i) => (
                                 <Ratings className="newProduct__rating"/>
@@ -72,7 +72,7 @@ function NewProduct({ id, title, image, price, rating }) {
                  
                 decimalScale={1}
                 thousandSeparator={true}
-                value={price}
+                value={props.price}
                 displayType={"text"}
                 prefix={"UGX "}
             />
@@ -84,6 +84,7 @@ function NewProduct({ id, title, image, price, rating }) {
             
             
         </div>
+
     )
 }
 

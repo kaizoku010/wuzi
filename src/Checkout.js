@@ -14,7 +14,7 @@ function Checkout() {
             <div className="checkout__left">
                 <img className="checkout__ad" src={Banner} alt="dfdfdfd" />
                 
-                <h3>Your shopping cart, {user?.email}</h3>
+                <h3 className="user_checkour_header">Your shopping cart, {user?.email}</h3>
                 <div className="checkout__title">
                 
                     {cart.map(item => (

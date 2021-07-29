@@ -44,6 +44,7 @@ function Payment() {
                     <div className="payment__title">
                         <h3>Delivery Address</h3>
                     </div>
+                                    {/* delivery address */}
                     <div className="payment__address">
                         <p>{ user?.email}</p>
                         <div>

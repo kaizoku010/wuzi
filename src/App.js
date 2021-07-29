@@ -51,21 +51,16 @@ function App() {
       
         <Switch>
           
+
+          
           <Route path="/checkout">
           <Header />
             <Checkout />
           </Route>
-          
-          <Route path="/product" component={ProductScreen}>
-          <Header />
-            <ProductScreen/>
+
+          <Route path="/product/:id"  component={ProductScreen}>
           </Route>
         
-          
-          <Route path="/login">
-            <Login/>
-          </Route>
-
           <Route path="/shop">
           <Header />
             <Shop />                     
@@ -88,13 +83,19 @@ function App() {
           <Header />
             <ContactPage />                     
           </Route>
+        
+          <Route path="/login">
+            <Login/>
+          </Route>
+
 
           <Route path="/">
           <Wuzi_home/>
           </Route>
+
+
+
         </Switch>
-
-
         <Footer/>
       </div>
     </Router>
