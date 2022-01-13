@@ -110,7 +110,7 @@
 @media screen and (max-width: 980px) {
   .hero__elementRightContentHolder2 {
     text-align: -webkit-right;
-    background-image: url(/static/media/banner1.2406872e.jpg);
+    background-image: url("./images/bg2.jpg");
     padding: 40px;
     background-color: #666;
     margin-bottom: 30px;
@@ -444,7 +444,7 @@
 
 .hero__elementRightContentHolder2 {
   text-align: -webkit-right;
-  background-image: url("./images/banner1.jpg");
+  background-image: url("./images/bg2.jpg");
   padding: 40px;
   background-color: #666;
   transition: all 1s;

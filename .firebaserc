@@ -1,6 +1,7 @@
 {
   "projects": {
     "default": "wuzi-app",
-    "y": "wuzi-app"
+    "build": "wuzi-app",
+    "kaizoku-sama": "wuzi-app"
   }
 }
