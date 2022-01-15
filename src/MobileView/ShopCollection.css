@@ -1,0 +1,41 @@
+
+.shop-collection{
+    display: none;
+
+}
+
+@media screen and (max-width: 900px) {
+
+    .shop-collection{
+        display: grid;
+        text-align-last: center;
+        margin: 20px;
+        place-content: center;
+        margin-bottom: 38px;
+    }
+
+
+    .clothList{
+        grid-template-columns : auto auto auto;
+        grid-template-rows: auto ;
+        padding: 0%;
+        list-style: none;
+        margin: 1rem 0;
+        height: max-content; 
+    }
+    
+    
+    .mobile-view-image{
+    height: 100px !important;
+
+    }
+    
+    .mobile-view-desc{
+        margin: 20px;
+
+
+    }
+}
+
+
+

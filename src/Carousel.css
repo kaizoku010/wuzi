@@ -31,6 +31,12 @@
   background-position: center;
 }
 
-@media screen and (max-width: 640px) {
-
+@media screen and (max-width: 992px) {
+  .carousel__holder {
+    /* flex-grow: 2; */
+    width: 30px;
+    margin-right: 20px;
+    text-align: -webkit-center;
+    height: 530px;
+  }
 }

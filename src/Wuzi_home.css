@@ -12,7 +12,7 @@
   top: 0;
 }
 
-.header_ {
+.header_hm {
   position: fixed;
   top: 0;
   width: 100%;
@@ -105,7 +105,22 @@
     /* background-color: #ececec; */
     margin-right: 0px;
   }
+
+  .active {
+    background: black;
+    background-color: #1a1a1a;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 999;
+  }
+  
+
 }
+/* mobile 2 */
+
 
 @media screen and (max-width: 980px) {
   .hero__elementRightContentHolder2 {
@@ -118,7 +133,7 @@
 
   .arrivals__holder p {
     font-weight: initial;
-    margin-bottom: 96px;
+    margin-bottom: 31px;
   }
 
   .hero__motivation {
@@ -141,7 +156,15 @@
   }
 }
 
+/* mobile */
+
 @media screen and (max-width: 990px) {
+  
+  .arrivals__holder {
+    text-align: center;
+    margin-top: 38px !important;
+    margin-bottom: 40px !important;
+}
   .hero__title {
     /* float: left; */
     /* margin-top: 60px; */
@@ -222,7 +245,7 @@
       url(/static/media/home__bg.52864157.jpg);
     /* background-size: 100px 100px; */
     z-index: 1;
-    /* width: 100%; */
+    width: 100;
     padding-top: 147px;
     padding-right: 60px;
     background-size: cover;
@@ -427,6 +450,10 @@
   }
   s .hero__elementRightContentHolder:hover {
     box-shadow: 2px 2px 2px 2px rgba(145, 144, 144, 0.158);
+  }
+
+  .hero__element{
+    display: none;
   }
 }
 

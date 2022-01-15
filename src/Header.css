@@ -118,4 +118,12 @@
   .header__search {
     visibility: hidden;
   }
+
+  .wuzi_menu{
+    margin-right: 30px;
+    align-self: center !important;
+    width: 30px;
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+  }
 }
