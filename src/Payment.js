@@ -7,6 +7,7 @@ import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import { getCartTotal } from "./reducer";
 import { Link, useHistory } from "react-router-dom";
 import axios from "./axios";
+import FlutterWave from "./FlutterWave.js";
 
 function Payment() {
   const [{ cart, user }] = useStateValue();
@@ -16,24 +17,24 @@ function Payment() {
   const [error, setError] = useState(null);
   const [succeeded, setSucceeded] = useState(false);
   const [processing, setProcessing] = useState("");
-  const [clientSecret, setClientSecret] = useState(true);
+  const [clientSecret, setClientSecret] = useState('');
+  const stringClientSecret = clientSecret.toString();
 
   useEffect(() => {
+    const getClientSecret = async () => {
+      const response = await axios({
+        method: "post",
+        //convert to subunites
+        url: `/payments/create?total=${getCartTotal(cart) * 100}`,
+      });
 
-    const getClientSecret = async()=>{
-            const response = await axios({
-                method:"post",
-            //convert to subunites
-                url: `/payments/create?total=${getCartTotal(cart) * 100}`
-            })
-            setClientSecret(response.data.clientSecret)
-        }
+      setClientSecret(response.data.clientSecret);
+    };
 
-            getClientSecret()
-  }, [cart])
+    getClientSecret();
+  }, [cart]);
 
-console.log("the secret is " + clientSecret)
-
+  console.log("The client secret is " + stringClientSecret);
 
   const stripe = useStripe();
   const elements = useElements();
@@ -42,18 +43,19 @@ console.log("the secret is " + clientSecret)
     //stripe work....
     e.preventDefault();
     setProcessing(true);
-    const payload = await stripe.confirmCardPayment(clientSecret, {
-        payment_method:{
-            card:elements.getElement(CardElement)
-        }
-    }).then(({paymentIntent}) =>{
+    const payload = await stripe
+      .confirmCardPayment(stringClientSecret, {
+        payment_method: {
+          card: elements.getElement(CardElement),
+        },
+      })
+      .then(({ paymentIntent }) => {
         setSucceeded(true);
         setError(null);
-        setProcessing(false)
+        setProcessing(false);
 
-        history.replaceState('/orders')
-    } )
-
+        history.replaceState("/orders");
+      });
   };
 
   const handleChange = (e) => {
@@ -139,6 +141,8 @@ console.log("the secret is " + clientSecret)
               {/* errors */}
               {error && <div>{error}</div>}
             </form>
+<FlutterWave/>
+
           </div>
         </div>
       </div>

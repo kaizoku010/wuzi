@@ -14,9 +14,11 @@ import { useStateValue } from "./StateProvider";
 import { useState } from "react";
 import { useRef } from "react";
 import Carousell from "./Carousel";
-import ham from "./images/ham.png"
+import ham from "./images/ham.png";
 import WomenMenElement from "./WomenMenElements/WomenMenElement";
 import ShopCollection from "./MobileView/ShopCollection";
+import Menu from "./Menu";
+import TopbarMenu from "./CustomComponents/TopbarMenu";
 
 function WuziHome() {
   const [header_hm, setNavBar] = useState(false);
@@ -41,17 +43,19 @@ function WuziHome() {
   return (
     <div>
       {/* header and image section below */}
-      <div>
+      <div className="top__header">
         <nav className={header_hm ? "active" : "header_hm"}>
           {/* get the logo from shyaka */}
           <meta
             name="viewport"
             content="minimum-scale=1, initial-scale=1, width=device-width"
           />
-
           <Link to="/">
             <img className="header__logo" src={logo} alt="wuzi_logo" />
           </Link>
+
+          <Menu className="mobile_menu" />
+
           {/* searchbox */}
           <div className="header__search">
             <input type="text" className="header__searchInput" />
@@ -86,9 +90,7 @@ function WuziHome() {
                 <span className="header__optionsLineTwo">wuzi</span>
               </div>
             </Link>
-
-            <img className="menu_ic wuzi_menu" src={ ham } />
-
+            {/* <img className="menu_ic wuzi_menu" src={ ham } /> */}
             {/* contact us */}
             <Link className="header__link" to="/contact">
               <div className="header__options">
@@ -106,20 +108,19 @@ function WuziHome() {
                 </span>
               </div>
             </Link>
-
-
           </div>
         </nav>
       </div>
 
       <div className="home__">
-        {/* <h1 className="hero__title">Properties Of Relativity</h1> */}
 
         <div className="home_discount__holder">
+          {/* discount element */}
           <div className="home__discount">
             <p className="discountUp__text">UP</p>
             <p>TO</p>
           </div>
+          
           <h2 className="discount__off">30% OFF</h2>
         </div>
 
@@ -132,6 +133,7 @@ function WuziHome() {
           <button className="hero__btn">CHECK IT OUT</button>
           {/* <button className="hero__btn2">contact us</button>   */}
         </Link>
+
       </div>
 
       {/* second element */}
@@ -141,9 +143,8 @@ function WuziHome() {
         <p>The Best Online Sales This Week</p>
       </div>
 
-
       {/* //mobile element goes here..... */}
-      <ShopCollection/>
+      <ShopCollection />
 
       <div className="hero__element">
         <Carousell />
@@ -158,7 +159,7 @@ function WuziHome() {
 
           <div className="hero__elementRightContentHolder2">
             <h3 className="headerRight__Section">NEW YEAR'S SEASON</h3>
-            <h2 className="text__right__section">JUMP START YOUR 2021</h2>
+            <h2 className="text__right__section">JUMP START YOUR 2022</h2>
             <Link to={"/product/" + 6}>
               <button className="btn__">Shop Now</button>
             </Link>

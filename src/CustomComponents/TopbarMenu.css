@@ -1,0 +1,171 @@
+/* large screens for now */
+.wuzi_header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  background-color: white;
+  z-index: 100;
+  flex-direction: column;
+}
+.bold-text {
+  font-weight: bold;
+}
+
+.wuzi_header > a:hover {
+  color: #d52027;
+}
+
+.twf-visit {
+  display: flex;
+  background-color: white;
+  flex-direction: row;
+  place-content: flex-end;
+  font-size: 10px;
+  width: 100%;
+  /* padding: 10px 30px 10px 0px; */
+}
+
+.twf-visit > a {
+  padding: 10px 40px 10px 0px;
+  text-align: right;
+  text-decoration: none;
+  color: black;
+}
+
+.shipping_notice {
+  width: 100%;
+  padding: 0px;
+  text-align: center;
+  place-content: space-evenly;
+  color: black;
+  background-color: black;
+  display: flex;
+}
+.shipping_notice > p {
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+.primary_menu {
+  width: 100%;
+  display: flex;
+  color: white;
+  place-items: center;
+  flex-direction: row;
+  place-content: space-between;
+}
+
+.middle_widget > a {
+  color: black;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.middle_widget > a:hover {
+  color: #d52027;
+}
+
+.middle_widget {
+  display: flex;
+}
+
+.right_widget {
+  display: flex;
+  place-items: center;
+  margin-right: 40px;
+}
+
+.search_widget {
+  color: white !important;
+  background-color: white;
+  border-radius: 0px;
+}
+
+.search_icon {
+  color: #131921;
+  margin-left: 10px;
+}
+
+.wuzi-menu-link {
+  color: black !important;
+  text-decoration: none;
+}
+
+.wuzi_logo {
+  /* margin left and right */
+  margin: 0 40px;
+  object-fit: contain;
+  width: 100px;
+  margin-bottom: 13px;
+  margin-top: 18px;
+}
+
+.searchInput_widget {
+  height: 12px;
+  padding: 10px;
+  border: none;
+  width: 30%;
+}
+
+.wuzi-bag {
+  padding: 5px;
+  height: 22px !important;
+  background-color: #d52027;
+  color: white;
+}
+
+.header__search {
+  flex: 1;
+  display: flex;
+}
+
+.header__basketCount {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.header__optionsBasket {
+  display: flex;
+  color: white;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.header__optionsBasket:hover {
+  display: flex;
+  color: gray;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.header__optionsLineOne {
+  font-size: 10px;
+}
+
+.header__optionsLineTwo {
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.user_account_ic {
+  color: black !important;
+}
+
+.user_account_ic:hover {
+  color: rgb(215 32 39) !important;
+}
+
+.wuzi-item-count {
+  color: black !important;
+}
+.wuzi_bold {
+  font-weight: bold !important;
+}

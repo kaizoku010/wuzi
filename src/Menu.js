@@ -1,5 +1,7 @@
 import React from "react";
-import { css } from "emotion";
+import { css } from "@emotion/css";
+import "./Wuzi_home.css";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 const easeSlow = css`
   transition: all 450ms ease-in-out;
@@ -9,22 +11,29 @@ const menuBtn = css`
   position: absolute;
   z-index: 3;
   right: 35px;
-  top: 35px;
+  // top: 35px;
   cursor: pointer;
   ${easeSlow};
   &.closer {
     transform: rotate(180deg);
   }
+  @media (min-width: 650px) {
+    display: none;
+  }
+`;
+
+const mobileMenu = css`
+  display: none !important;
 `;
 
 const btnLine = css`
   width: 28px;
   height: 4px;
   margin: 0 0 5px 0;
-  background-color: #71C57F;
+  background-color: #ffffff;
   ${easeSlow};
   &.closer {
-    background-color: #E76E81;  
+    background-color: #df5056;
     &:nth-child(1) {
       transform: rotate(45deg) translate(4px, 0px);
       width: 20px;
@@ -44,14 +53,14 @@ const menuOverlay = css`
   position: fixed;
   top: 0;
   right: 0;
-  background-color: white;
+  background-color: gray;
   height: 100vh;
   width: 40vw;
   transform: translateX(100%);
   transition: all 500ms ease-in-out;
   &.show {
-    background-color: #FEF7E1;
-    transform: translateX(0%); 
+    background-color: #1a1a1a;
+    transform: translateX(0%);
   }
   nav {
     padding-top: 100px;
@@ -61,22 +70,22 @@ const menuOverlay = css`
     a {
       height: 30px;
       text-decoration: none;
-      color: #EB4C54;
+      color: #eb4c54;
       cursor: pointer;
       transition: all 150ms ease-in-out;
       &:hover {
-        color: #F28EBA;
-      } 
+        color: #f28eba;
+      }
     }
   }
-  @media (max-width: 800px) {
+  @media (max-width: 400px) {
     width: 100vw;
   }
 `;
 
 class Menu extends React.Component {
   state = {
-    isMenuOpen: false
+    isMenuOpen: false,
   };
 
   toggleMenu = () =>
@@ -87,7 +96,7 @@ class Menu extends React.Component {
     return (
       <React.Fragment>
         <div
-          className={`${menuBtn} ${isMenuOpen ? "closer" : null}`}
+          className={`${menuBtn}  ${isMenuOpen ? "closer" : null}`}
           onClick={this.toggleMenu}
         >
           <div className={`${btnLine} ${isMenuOpen ? "closer" : null}`} />
@@ -96,9 +105,12 @@ class Menu extends React.Component {
         </div>
         <div className={`${menuOverlay} ${isMenuOpen ? "show" : null}`}>
           <nav>
-            <a href="#">Cool thing to click</a>
-            <a href="#">An even cooler thing to click</a>
-            <a href="#">Some more stuff to click</a>
+            <Link href="#">Sign in</Link>
+            <Link href="#">Shop</Link>
+            <Link href="#">About</Link>
+            <Link href="#">Contact</Link>
+            <Link href="#">Orders</Link>
+            <Link href="#">Cart</Link>
           </nav>
         </div>
       </React.Fragment>

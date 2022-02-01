@@ -15,6 +15,8 @@ import  ContactPage  from "./ContactPage";
 import ProductScreen from "./ProductScreen";
 import { useStateValue } from "./StateProvider";
 import Wuzi_home from "./WuziHome";
+import Home from "././CustomComponents/Home"
+
 
 
 const promise = loadStripe("pk_test_51HzK9kI42NMmSRyA4unYMwfpK2Lp8vjxFGP23sHYh1iCj7JJnihgKEdmnl6c4XtYxhk5BSXqD3orEgxW9dFowACh00kBg18n0r");
@@ -90,7 +92,8 @@ function App() {
 
 
           <Route path="/">
-          <Wuzi_home/>
+            {/* <Wuzi_home /> */}
+            <Home/>
           </Route>
 
 
