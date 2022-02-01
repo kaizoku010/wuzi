@@ -1,9 +1,10 @@
 .carousel__holder {
   /* flex-grow: 2; */
   width: 530px;
-  margin-right: 20px;
+  margin-right:0px;
   text-align: -webkit-center;
-  height: 530px;
+  text-align: center;
+
 }
 
 .carousel__price {
@@ -22,12 +23,28 @@
   font-size: 16px;
 }
 
+/* .carousel__price {
+   border-radius: 37px 37px 37px 37px;
+  background-color: #80808080;
+  color: black;
+  z-index: 111155;
+  margin-top: 20px;
+  font-weight: revert;
+  margin-left: 105px;
+  text-align: center;
+   padding: 11px; 
+  width: 51px;
+  margin-top: 319px;
+  position: absolute;
+  align-self: baseline;
+  font-size: 13px; 
+} */
+
 .carousel__image {
   background-size: cover;
   flex-grow: 2;
   z-index: 1;
   object-fit: unset;
-  height: 530px;
   background-position: center;
 }
 
@@ -39,4 +56,12 @@
     text-align: -webkit-center;
     height: 530px;
   }
+}
+
+.wuzi_slider{
+  text-align: -webkit-center !important;
+}
+
+.wuzi_slide{
+
 }
