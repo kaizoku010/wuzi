@@ -1,26 +1,25 @@
 .carousel__holder {
   /* flex-grow: 2; */
   width: 530px;
-  margin-right:0px;
+  margin-bottom: 40px;
+  margin-right: 0px;
   text-align: -webkit-center;
   text-align: center;
-
 }
 
 .carousel__price {
-  border-radius: 37px 37px 37px 37px;
-  background-color: #80808080;
-  color: white;
+  /* border-radius: 37px 37px 37px 37px; */
+  background-color: white;
+  color: black;
   z-index: 2;
-  margin-top: 20px;
-  font-weight: revert;
-  margin-left: 20px;
+
+  font-weight: 100;
+
   text-align: center;
-  padding: 11px;
-  width: 100px;
+  padding: 5px 5px 5px 5px;
   position: absolute;
-  align-self: start;
-  font-size: 16px;
+  /* align-self: start; */
+  font-size: 12px;
 }
 
 /* .carousel__price {
@@ -58,10 +57,64 @@
   }
 }
 
-.wuzi_slider{
+.wuzi_slider {
   text-align: -webkit-center !important;
 }
 
-.wuzi_slide{
+/* .wuzi_slide {
+  margin: 0px 150px 0px 150px;
+  width: 0% !important;
+} */
 
+.wuzi_slider_slide {
+}
+
+/* .slick-slide {
+  width: fit-content !important;
+} */
+
+.slick-dots {
+  position: absolute;
+  bottom: -63px !important;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-top: 125px;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.slick-dots:hover {
+  color: red !important;
+}
+
+.slick-dots li button:after {
+  font-family: 'slick';
+  font-size: 6px;
+  line-height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  content: '•';
+  text-align: center;
+  opacity: .25;
+  color: black important;
+}
+
+.slick-dots li button:before {
+  font-family: 'slick';
+  font-size: 6px;
+  line-height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  content: '•';
+  text-align: center;
+  opacity: .25;
+  color: red;
 }
