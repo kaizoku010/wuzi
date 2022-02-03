@@ -4,6 +4,7 @@ import "./Home.css";
 import ItemHolder from './ItemHolder';
 import StillIntrested from './StillIntrested';
 import TopbarMenu from "./TopbarMenu";
+import WuziSlider from './WuziSlider';
 
 function Home() {
     return (
@@ -11,7 +12,7 @@ function Home() {
             <TopbarMenu />   
             <HeroSection />
             <StillIntrested />
-            <ItemHolder/>
+            <WuziSlider/>
         </div>
     )
 }

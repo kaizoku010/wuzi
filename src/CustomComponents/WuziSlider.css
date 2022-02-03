@@ -1,0 +1,26 @@
+.react-multi-carousel-item {
+  text-align: -webkit-center !important;
+  /* width: 506px; */
+  width: fit-content !important;
+  margin: 0px 116px 0px 44px;
+}
+
+/* .wuzi-slider {
+  center: 0 !important;
+} */
+
+.carousel-button-group {
+  position: absolute;
+}
+
+.react-multiple-carousel__arrow--left {
+  offset-rotate: 127px;
+  left: calc(89% + 1px) !important;
+  z-index: 2;
+  transform: rotate(180deg);
+  background-color: #3d3d3d;
+}
+
+.react-multiple-carousel__arrow--left:hover {
+  background-color: #d72027;
+}
